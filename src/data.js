@@ -2,6 +2,16 @@ import { v4 as uuidv4 } from "uuid";
 function chillHop() {
   return [
     {
+      name: "Daylight",
+      cover:
+        "https://chillhop.com/wp-content/uploads/2020/07/ef95e219a44869318b7806e9f0f794a1f9c451e4-1024x1024.jpg",
+      artist: "Aiguille",
+      audio: "https://mp3.chillhop.com/serve.php/?mp3=9272",
+      color: ["#EF8EA9", "#ab417f"],
+      id: uuidv4(),
+      active: true,
+    },
+    {
       name: "Caramel",
       artist: "Leavv",
       cover:
@@ -9,7 +19,7 @@ function chillHop() {
       color: ["#cf3952", "#ddb700"],
       audio: "https://mp3.chillhop.com/serve.php/?mp3=34162",
       id: uuidv4(),
-      active: true,
+      active: false,
     },
     {
       name: "Beaver Creek",
@@ -18,16 +28,6 @@ function chillHop() {
       artist: "Aso, Middle School, Aviino",
       audio: "https://mp3.chillhop.com/serve.php/?mp3=10075",
       color: ["#205950", "#2ab3bf"],
-      id: uuidv4(),
-      active: false,
-    },
-    {
-      name: "Daylight",
-      cover:
-        "https://chillhop.com/wp-content/uploads/2020/07/ef95e219a44869318b7806e9f0f794a1f9c451e4-1024x1024.jpg",
-      artist: "Aiguille",
-      audio: "https://mp3.chillhop.com/serve.php/?mp3=9272",
-      color: ["#EF8EA9", "#ab417f"],
       id: uuidv4(),
       active: false,
     },
@@ -80,7 +80,7 @@ function chillHop() {
       audio: "https://mp3.chillhop.com/serve.php/?mp3=31608",
       id: uuidv4(),
       active: false,
-    },
+    }
   ];
 }
 
