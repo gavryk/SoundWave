@@ -39,6 +39,9 @@ const App = () => {
         audioRef={audioRef}
         songInfo={songInfo}
         setSongInfo={setSongInfo}
+        songs={songs}
+        setCurrentSong={setCurrentSong}
+        currentSong={currentSong}
       />
       <Library
         audioRef={audioRef}
