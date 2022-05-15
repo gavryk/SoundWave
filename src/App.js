@@ -1,12 +1,12 @@
-import React from 'react'
-import "./App.scss";
+import React from 'react';
+import { Player } from "./components";
 
 const App = () => {
   return (
-    <div>
-      <h1>Hello React</h1>
+    <div class="App">
+      <Player />
     </div>
-  )
+  );
 }
 
 export default App
