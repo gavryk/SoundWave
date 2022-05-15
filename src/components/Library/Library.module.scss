@@ -7,6 +7,13 @@
     background-color: #fff;
     box-shadow: 2px 2px 50px rgba(128, 128, 128, .5);
     overflow-y: scroll;
+    transform: translateX(-100%);
+    transition: all .5s ease-in-out;
+    opacity: 0;
+    &.toggle {
+        transform: translateX(0);
+        opacity: 1;
+    }
     .libraryTitle {
         padding: 1.5rem 1rem;
     }
