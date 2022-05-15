@@ -1,11 +1,11 @@
 import React from "react";
 import style from "./Song.module.scss";
 
-const Song = ({cover, name, artist}) => {
+const Song = ({ cover, name, artist, isPlaying }) => {
   return (
     <div className={style.songContainer}>
       <div className={style.cover}>
-        <img src={cover} alt={name} />
+        <img className={isPlaying ? style.rotateImg : ''} src={cover} alt={name} />
       </div>
       <div className={style.name}>
         <h2>{name}</h2>

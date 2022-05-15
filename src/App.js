@@ -37,7 +37,7 @@ const App = () => {
   return (
     <div className="App">
       <Nav libraryOpen={libraryOpen} setLibraryOpen={setLibraryOpen} />
-      <Song {...currentSong} />
+      <Song {...currentSong} isPlaying={isPlaying} />
       <PlayerControler
         {...currentSong}
         isPlaying={isPlaying}

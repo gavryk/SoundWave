@@ -11,12 +11,24 @@
       width: 25%;
       border-radius: 50%;
       overflow: hidden;
+      &.rotateImg {
+        animation: rotate 20s linear forwards infinite;
+      }
     }
   }
   .name {
-      padding: 1rem 0;
+    padding: 1rem 0;
   }
   .artist {
 
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
