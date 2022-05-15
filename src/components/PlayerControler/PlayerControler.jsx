@@ -1,14 +1,19 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState } from "react";
 import style from "./PlayerControler.module.scss";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlay, faPause, faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faPlay,
+  faPause,
+  faAngleLeft,
+  faAngleRight,
+} from "@fortawesome/free-solid-svg-icons";
 
-const PlayerControler = ({audio, isPlaying, setIsPlaying}) => {
+const PlayerControler = ({ audio, isPlaying, setIsPlaying }) => {
   //State
   const [songInfo, setSongInfo] = useState({
-    currentTime: null,
-    duration: null
-  })
+    currentTime: 0,
+    duration: 0,
+  });
   //Audio Ref
   const audioRef = useRef(null);
 
@@ -16,14 +21,23 @@ const PlayerControler = ({audio, isPlaying, setIsPlaying}) => {
   const playHandler = () => {
     setIsPlaying(!isPlaying);
     !isPlaying ? audioRef.current.play() : audioRef.current.pause();
-  }
+  };
 
   //Format Time
   const getTime = (time) => {
     return (
       Math.floor(time / 60) + ":" + ("0" + Math.floor(time % 60)).slice(-2)
-    )
-  }
+    );
+  };
+
+  //Drag Range Handler
+  const dragHandler = (e) => {
+    audioRef.current.currentTime = e.target.value;
+    setSongInfo({
+      ...songInfo,
+      currentTime: e.target.value
+    })
+  };
 
   //Time Update
   const timeUpdateHandler = (e) => {
@@ -32,14 +46,21 @@ const PlayerControler = ({audio, isPlaying, setIsPlaying}) => {
     setSongInfo({
       ...songInfo,
       currentTime: current,
-      duration
-    })
-  }
+      duration,
+    });
+  };
+
   return (
     <div className={style.playerContainer}>
       <div className={style.timeControl}>
         <p>{getTime(songInfo.currentTime)}</p>
-        <input type="range" />
+        <input
+          onChange={dragHandler}
+          min={0}
+          max={songInfo.duration}
+          value={songInfo.currentTime}
+          type="range"
+        />
         <p>{getTime(songInfo.duration)}</p>
       </div>
       <div className={style.playControl}>
@@ -73,6 +94,6 @@ const PlayerControler = ({audio, isPlaying, setIsPlaying}) => {
       ></audio>
     </div>
   );
-}
+};
 
 export default PlayerControler;
