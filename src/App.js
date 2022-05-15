@@ -1,10 +1,11 @@
 import React from 'react';
-import { Player } from "./components";
+import { PlayerControler, Song } from "./components";
 
 const App = () => {
   return (
     <div class="App">
-      <Player />
+      <Song />
+      <PlayerControler />
     </div>
   );
 }

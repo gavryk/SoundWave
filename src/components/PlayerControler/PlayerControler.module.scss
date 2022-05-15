@@ -1,0 +1,25 @@
+.playerContainer {
+  min-height: 20vh;
+  display: grid;
+  grid-template-columns: repeat(1, 0.5fr);
+  justify-content: center;
+  grid-gap: 15px;
+  .timeControl {
+    background-color: lightcoral;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    grid-gap: 1.5rem;
+    padding: 0.5rem 0;
+  }
+}
+
+.playControl {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: space-around;
+    align-items: center;
+    svg {
+        cursor: pointer;
+    }
+}

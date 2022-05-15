@@ -1,13 +1,11 @@
 import React from 'react';
-import Song from '../Song/Song';
-import style from "./Player.module.scss";
+import style from "./PlayerControler.module.scss";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
-const Player = () => {
+const PlayerControler = () => {
   return (
-    <div className={style.player}>
-      <Song />
+    <div className={style.playerContainer}>
       <div className={style.timeControl}>
         <p>Start Time</p>
         <input type="range" />
@@ -22,4 +20,4 @@ const Player = () => {
   );
 }
 
-export default Player;
+export default PlayerControler;
