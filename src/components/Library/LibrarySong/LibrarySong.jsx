@@ -1,4 +1,5 @@
 import React from "react";
+import { playAudio } from "../../../utils/util";
 import style from "./LibrarySong.module.scss";
 
 const LibrarySong = ({
@@ -32,14 +33,7 @@ const LibrarySong = ({
     });
     setSongs(newSongs);
     //Check of Song is playing
-    if (isPlaying) {
-      const playPromise = audioRef.current.play();
-      if (playPromise !== undefined) {
-        playPromise.then((audio) => {
-          audioRef.current.play();
-        });
-      }
-    }
+    playAudio(isPlaying, audioRef);
   };
 
   return (

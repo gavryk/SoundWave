@@ -80,7 +80,27 @@ function chillHop() {
       audio: "https://mp3.chillhop.com/serve.php/?mp3=31608",
       id: uuidv4(),
       active: false,
-    }
+    },
+    {
+      name: "Seagulls",
+      artist: "Misha, Zmeyev, Viktor Minsky",
+      cover:
+        "https://chillhop.com/wp-content/uploads/2022/01/5753da482a6839b31e4905b22a2f8d65913e7eb4-1024x1024.jpg",
+      color: ["#fff4e2", "#dad7d0"],
+      audio: "https://mp3.chillhop.com/serve.php/?mp3=28936",
+      id: uuidv4(),
+      active: false,
+    },
+    {
+      name: "Santiago",
+      artist: "Psalm Trees, Moods",
+      cover:
+        "https://chillhop.com/wp-content/uploads/2022/01/5753da482a6839b31e4905b22a2f8d65913e7eb4-1024x1024.jpg",
+      color: ["#fff4e2", "#dad7d0"],
+      audio: "https://mp3.chillhop.com/serve.php/?mp3=30202",
+      id: uuidv4(),
+      active: false,
+    },
   ];
 }
 

@@ -11,15 +11,44 @@
     align-items: center;
     grid-gap: 1.5rem;
     padding: 0.5rem 0;
+    .track {
+      position: relative;
+      border-radius: 1rem;
+      overflow: hidden;
+      background-color: lightblue;
+      input {
+        -webkit-appearance: none;
+        background-color: transparent;
+        cursor: pointer;
+        outline: none;
+        width: 100%;
+        height: 1rem;
+        &::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          height: 16px;
+          width: 16px;
+        }
+      }
+      .animateTrack {
+        background: rgb(204, 204, 204);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateX(0);
+        pointer-events: none;
+      }
+    }
   }
 }
 
 .playControl {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    justify-content: space-around;
-    align-items: center;
-    svg {
-        cursor: pointer;
-    }
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: space-around;
+  align-items: center;
+  svg {
+    cursor: pointer;
+  }
 }
