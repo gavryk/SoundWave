@@ -4,8 +4,8 @@
   grid-template-columns: repeat(1, 0.5fr);
   justify-content: center;
   grid-gap: 15px;
+  margin-bottom: 1rem;
   .timeControl {
-    background-color: lightcoral;
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;

@@ -1,9 +1,22 @@
 .songContainer {
-    min-height: 60vh;
-    background-color: lightblue;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    flex-direction: column;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  .cover {
+    text-align: center;
+    img {
+      width: 25%;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+  }
+  .name {
+      padding: 1rem 0;
+  }
+  .artist {
+
+  }
 }
