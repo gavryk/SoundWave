@@ -8,11 +8,18 @@
   .cover {
     text-align: center;
     img {
-      width: 25%;
+      width: 30%;
       border-radius: 50%;
+      transition: all .4s ease-in-out;
       overflow: hidden;
       &.rotateImg {
         animation: rotate 20s linear forwards infinite;
+      }
+      @media screen and (max-width: 1024px) {
+        width: 40%;
+      }
+      @media screen and (max-width: 576px) {
+        width: 80%;
       }
     }
   }

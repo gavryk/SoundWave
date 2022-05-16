@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { Library, Nav, PlayerControler, Song } from "./components";
 //Import Musics
-import data from './data';
+import data from './utils/data';
 
 const App = () => {
   //Audio Ref
@@ -15,7 +15,7 @@ const App = () => {
   const [songInfo, setSongInfo] = useState({
     currentTime: 0,
     duration: 0,
-    animateTrack: 0
+    animateTrack: 0,
   });
 
   //Time Update
@@ -30,12 +30,21 @@ const App = () => {
       ...songInfo,
       currentTime: current,
       duration,
-      animateTrack, 
+      animateTrack,
     });
   };
 
+  //Auto Skip
+  const songEndHandler = async ( ) => {
+    let currentIndex = songs.findIndex((song) => song.id === currentSong.id);
+    await setCurrentSong(songs[(currentIndex + 1) % songs.length]);
+    setTimeout(() => {
+      if (isPlaying) audioRef.current.play();
+    }, 1000)
+  };
+
   return (
-    <div className="App">
+    <div className={`App ${libraryOpen ? "library-active" : ""}`}>
       <Nav libraryOpen={libraryOpen} setLibraryOpen={setLibraryOpen} />
       <Song {...currentSong} isPlaying={isPlaying} />
       <PlayerControler
@@ -61,6 +70,7 @@ const App = () => {
       <audio
         onTimeUpdate={timeUpdateHandler}
         onLoadedMetadata={timeUpdateHandler}
+        onEnded={songEndHandler}
         ref={audioRef}
         src={currentSong.audio}
       ></audio>

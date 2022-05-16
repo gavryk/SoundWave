@@ -5,6 +5,9 @@
   justify-content: center;
   grid-gap: 15px;
   margin-bottom: 1rem;
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: repeat(1, 0.9fr);
+  }
   .timeControl {
     display: grid;
     grid-template-columns: auto 1fr auto;

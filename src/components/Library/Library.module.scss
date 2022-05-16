@@ -10,6 +10,9 @@
     transform: translateX(-100%);
     transition: all .5s ease-in-out;
     opacity: 0;
+    @media screen and (max-width: 768px) {
+        width: 100%;
+    }
     &.toggle {
         transform: translateX(0);
         opacity: 1;
