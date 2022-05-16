@@ -9,10 +9,11 @@ body {
   font-family: 'Lato', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #fff;
 }
 
 h1, h2, h3, h4, h5 {
-  color: rgba(70, 70, 70, 1);
+  color: rgb(29, 1, 1);
   transition: all .2s ease-in-out;
 }
 
@@ -26,7 +27,7 @@ h3, h4, h5 {
 }
 
 .library-active {
-  margin-left: 35%;
+  margin-left: 27%;
 }
 
 code {

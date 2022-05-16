@@ -16,6 +16,7 @@ const App = () => {
     currentTime: 0,
     duration: 0,
     animateTrack: 0,
+    volume: 0,
   });
 
   //Time Update
@@ -31,6 +32,7 @@ const App = () => {
       currentTime: current,
       duration,
       animateTrack,
+      volume: e.target.volume,
     });
   };
 
