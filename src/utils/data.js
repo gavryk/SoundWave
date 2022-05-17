@@ -12,6 +12,36 @@ function chillHop() {
       active: true,
     },
     {
+      name: "Letters",
+      artist: "Oh Caroline, Lhasa Petik, Towerz",
+      cover:
+        "https://chillhop.com/wp-content/uploads/2022/01/d7c0bd347f56540babd9dd85454b93a89df84a15-1024x1024.jpg",
+      color: ["#f17758", "#8f4e51"],
+      audio: "https://mp3.chillhop.com/serve.php/?mp3=30131",
+      id: uuidv4(),
+      active: false,
+    },
+    {
+      name: "Embers",
+      artist: "Molly McPhaul, Enluv",
+      cover:
+        "https://chillhop.com/wp-content/uploads/2022/01/d7c0bd347f56540babd9dd85454b93a89df84a15-1024x1024.jpg",
+      color: ["#f17758", "#8f4e51"],
+      audio: "https://mp3.chillhop.com/serve.php/?mp3=30135",
+      id: uuidv4(),
+      active: false,
+    },
+    {
+      name: "Leaf Contour",
+      artist: "Sleepy Fish",
+      cover:
+        "https://chillhop.com/wp-content/uploads/2022/01/d7c0bd347f56540babd9dd85454b93a89df84a15-1024x1024.jpg",
+      color: ["#f17758", "#8f4e51"],
+      audio: "https://mp3.chillhop.com/serve.php/?mp3=30130",
+      id: uuidv4(),
+      active: false,
+    },
+    {
       name: "Caramel",
       artist: "Leavv",
       cover:
@@ -98,6 +128,26 @@ function chillHop() {
         "https://chillhop.com/wp-content/uploads/2022/01/5753da482a6839b31e4905b22a2f8d65913e7eb4-1024x1024.jpg",
       color: ["#fff4e2", "#dad7d0"],
       audio: "https://mp3.chillhop.com/serve.php/?mp3=30202",
+      id: uuidv4(),
+      active: false,
+    },
+    {
+      name: "Solar Cove",
+      artist: "Mama Aiuto",
+      cover:
+        "https://chillhop.com/wp-content/uploads/2021/03/e2cf41018e0c244f7f683dd6f6313551996a2952-1024x1024.jpg",
+      color: ["#fad5a1", "#cc4a3f"],
+      audio: "https://mp3.chillhop.com/serve.php/?mp3=16179",
+      id: uuidv4(),
+      active: false,
+    },
+    {
+      name: "Makai",
+      artist: "invention_",
+      cover:
+        "https://chillhop.com/wp-content/uploads/2021/03/e2cf41018e0c244f7f683dd6f6313551996a2952-1024x1024.jpg",
+      color: ["#fad5a1", "#cc4a3f"],
+      audio: "https://mp3.chillhop.com/serve.php/?mp3=16197",
       id: uuidv4(),
       active: false,
     },
